@@ -18,6 +18,7 @@ apt-get -y install --no-install-recommends \
     make \
     python3 \
     python3-pip \
+    pipx \
     software-properties-common \
     unzip \
     vim \
@@ -26,7 +27,7 @@ apt-get -y install --no-install-recommends \
 
 # Install pre-commit
 echo "Installing pre-commit..."
-pip3 install pre-commit
+PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install pre-commit
 
 # Create directory for Terraform plugin cache
 mkdir -p /home/vscode/.terraform.d/plugin-cache

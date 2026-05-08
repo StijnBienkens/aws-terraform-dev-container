@@ -100,7 +100,7 @@ sudo mv /tmp/infracost-linux-amd64 /usr/local/bin/infracost
 rm -f /tmp/infracost.tar.gz
 
 echo "Installing Checkov v${CHECKOV_VERSION}..."
-pip3 install checkov==${CHECKOV_VERSION}
+PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install checkov==${CHECKOV_VERSION}
 
 # Create .tflint.hcl config file
 mkdir -p /home/vscode/.tflint.d

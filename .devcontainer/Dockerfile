@@ -1,5 +1,5 @@
 ARG VARIANT="jammy"
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
+FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
 # Set versions as arguments
 ARG TERRAFORM_VERSION="1.12.1"
